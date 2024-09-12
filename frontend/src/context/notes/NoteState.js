@@ -37,13 +37,13 @@ const NoteState = (props) => {
 
   // delete a note
   const deletenote = async (id) => {
-    const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
-      method: "DELETE",
-      headers: {
-        'Content-Type': 'application/json',
-        "auth-token": localStorage.getItem('token')
-      },
-    });
+    // const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
+    //   method: "DELETE",
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     "auth-token": localStorage.getItem('token')
+    //   },
+    // });
     const newnotes = notes.filter((note) => {
       return note._id !== id;
     })
@@ -52,14 +52,14 @@ const NoteState = (props) => {
   // edit a note
   const editnote = async (id, title, description, tag) => {
 
-    const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
-      method: "PUT",
-      body: JSON.stringify({ title, description, tag }),
-      headers: {
-        "auth-token": localStorage.getItem('token'),
-        "Content-Type": "application/json"
-      },
-    });
+    // const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
+    //   method: "PUT",
+    //   body: JSON.stringify({ title, description, tag }),
+    //   headers: {
+    //     "auth-token": localStorage.getItem('token'),
+    //     "Content-Type": "application/json"
+    //   },
+    // });
     let newnotes = JSON.parse(JSON.stringify(notes))
     for (let index = 0; index < newnotes.length; index++) {
       const element = newnotes[index];
