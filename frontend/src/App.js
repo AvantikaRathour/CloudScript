@@ -7,8 +7,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Alert from './components/Alert';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState ,useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function App() {
   const [alert, setalert] = useState(null);
@@ -30,7 +29,7 @@ function App() {
           <div className='container'>
             <Routes>
               <Route path='/' element={<Home  showAlert={showAlert}/>}/>
-              <Route path='/about' element={<About showAlert={showAlert} />} />
+              <Route path='/about' element={<About />} />
               <Route path='/login' element={<Login showAlert={showAlert} />} ></Route>
               <Route path='/signup' element={<Signup  showAlert={showAlert}/>}></Route>
 

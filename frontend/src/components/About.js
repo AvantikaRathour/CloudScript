@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const About = (props) => {
-    const { showAlert } = props;
+const About = () => {
     // State to store the username
     const [username, setUsername] = useState('');
     const [loading, setLoading] = useState(true);

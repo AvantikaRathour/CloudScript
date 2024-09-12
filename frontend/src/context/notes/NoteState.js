@@ -44,7 +44,6 @@ const NoteState = (props) => {
         "auth-token": localStorage.getItem('token')
       },
     });
-    const json = await response.json();
     const newnotes = notes.filter((note) => {
       return note._id !== id;
     })
