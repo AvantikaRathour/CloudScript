@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom"
 const Login=(props)=>{
   const {showAlert} =props;
 
-    const host='http://localhost:5000';
+    const host='https://cloudscript.onrender.com';
     const [credentials,setcredentials]=useState({email:"",password:""});
     const navigate=useNavigate();
     const handleSubmit=async (e)=>{

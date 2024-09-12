@@ -5,7 +5,7 @@ const About = () => {
     const [username, setUsername] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
-    const host = "http://localhost:5000"
+    const host = "https://cloudscript.onrender.com"
 
     // Fetch username from the backend
     useEffect(() => {
